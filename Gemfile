@@ -12,7 +12,7 @@ gem 'jbuilder', '~> 2.0'
 gem 'sdoc', '~> 0.4.0',group: :doc
 gem 'spring', group: :development
 gem 'thinreports-rails'
-#2015/3/21 add
+#2015/3/21 add *****
 gem 'font-awesome-rails'
 
 gem 'therubyracer',  platforms: :ruby
