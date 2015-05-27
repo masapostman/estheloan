@@ -1,0 +1,15 @@
+<%= form_for @search_form, as: 'search', url: :customer_loanorders,
+	html: { method: :get,class: "search"} do |f| %>
+	<input type="text"  value="<%= @company_code %>"/>
+	<p id="jquery-ui-datepicker-wrap">
+    申込日:
+    <input type="text" id="receipt_date_from" name="receipt_date_from"/>
+    <label for="jquery-ui-datepicker-from">から</label>
+    <input type="text" id="receipt_date_to" name="receipt_date_to"/>
+    <label for="jquery-ui-datepicker-to">まで</label>
+	</p>
+
+	 <%= f.submit '表示' %>
+
+
+<% end %>

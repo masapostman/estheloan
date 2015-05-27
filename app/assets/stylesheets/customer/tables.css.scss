@@ -1,0 +1,60 @@
+@import 'colors';
+@import 'dimensions';
+
+div.table-wrapper {
+  width: 90%;
+  margin: 0 auto;
+
+  div.links {
+    text-align: right;
+    padding: $moderate;
+  }
+
+  table {
+    margin: $moderate auto 0;
+    border: solid 2px #ccc;
+    tr {
+      th {
+        background-color: #666666;
+        /*background: -moz-linear-gradient(-90deg, #2c952c, #28a956) repeat scroll 0% 0% transparent; 緑
+        background: -webkit-linear-gradient(-90deg, #2c952c, #28a956); 緑 */
+        background: -moz-linear-gradient(-90deg, #6a7176, #6a7176) repeat scroll 0% 0% transparent; 
+        background: -webkit-linear-gradient(-90deg, #6a7176, #6a7176);
+
+        color: #fafafa;
+        border-radius: 3px 3px;
+      }
+      /*th,td {     font-family: gotham,helvetica,arial,sans-serif; */
+        th,td {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 0.716667rem;
+    -moz-osx-font-smoothing: grayscale;}
+      th, td { padding: $narrow }
+      /*td.email ,td.password { font-family: monospace; } */
+      td.date { font-family: monospace; text-align: center }
+      td.boolean { text-align: center; }
+      td.numeric { text-align: right; }
+      td.receipt_number { text-align: center;}
+      td.receipt_date, td.start_date, td.end_date { text-align: center; }
+      td.application_money { text-align: right; }
+      td.actions {
+        text-align: center;
+        color: $dark_gray;
+      }
+    }
+  }
+
+  table.listing {
+    width: 100%;
+    tr:nth-child(even) { background-color: $very_light_gray }
+    tr:nth-child(odd) { background-color: $light_gray }
+    border-radius: 5px 5px;
+  }
+
+  table.attributes {
+    width: 100%;
+    th { padding-right: $moderate; width: 200px; }
+    td { background-color: $very_light_gray; }
+  }
+}

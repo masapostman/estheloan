@@ -1,0 +1,10 @@
+<%= form_for @search_form, as: 'search', url: :admin_loanorders,
+	html: { method: :get,class: "search"} do |f| %>
+
+	<%= select_tag :company_code,options_from_collection_for_select(Loanorder.select(:company_code, 	:company_name).uniq, :company_code, :company_name),{ include_blank: true}
+	 %>
+
+	 <%= f.submit '検索' %>
+
+
+<% end %>

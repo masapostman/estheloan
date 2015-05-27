@@ -1,0 +1,199 @@
+/*html, body {
+    overflow: hidden;
+} */
+body {
+    font-family:'Lucida Grande','Hiragino Kaku Gothic ProN',
+    Meiryo, sans-serif;
+    /*font-family: Helvetica,Arial,sans-serif; */ 
+    /*font-family: gotham,helvetica,arial,sans-serif; */
+    line-height: 150%;
+    font-size: 72%;
+    background: none repeat scroll 0% 0% #E8E9EA;
+    margin: 0px;
+    /*padding: 20px 0 17px 0; */
+    color: #323537;
+    height: 100%; /*2015/1/29 */
+
+}
+
+.index #wrapper {
+    display: table;
+}
+#wrapper {
+    width: 100%;
+    padding-bottom: 1em;
+    min-height: 100%; /*2015/1/29 */
+    height: auto !important;
+    height:100%;
+}
+
+
+#header {
+    /*background: -moz-linear-gradient(-90deg, #2c952c, #28a956) repeat scroll 0% 0% transparent; 緑
+    background: -webkit-linear-gradient(-90deg, #2c952c, #28a956);緑 */
+    /*background: -moz-linear-gradient(-90deg, #ff8f9c, #ff8f9e) repeat scroll 0% 0% transparent;
+    background: -webkit-linear-gradient(-90deg, #ff8f9c, #ff8f9e); ピンク系 */
+    background: -moz-linear-gradient(-90deg, #6a7176, #4d5256) repeat scroll 0% 0% transparent;
+    background: -webkit-linear-gradient(-90deg, #6a7176, #4d5256); 
+    display: table;
+    height: 20px;
+    width: 100%;
+    overflow: visible;
+    position: inherit;
+
+    padding: 5px 0px;
+    z-index: 900;
+
+}
+#header h1 {
+    display: table-cell;
+    vertical-align: middle;
+    white-space: nowrap;
+    color: #fff; 
+    margin-right: 20px;
+    margin-bottom: 0px;
+    padding: 3px 30px 0px;
+    font-size: 1.3em;
+    font-weight: normal;
+    line-height: 1.2;
+}
+#header-company {
+    margin-left: 8px;
+}
+h1 {
+    font-size: 2em;
+    line-height: 1;
+    margin-bottom: 0.5em;
+    text-align: center;
+}
+h1, h2, h3, h4, h5, h6 {
+    font-weight: normal;
+    color: #5E6469;
+}
+#header #tabs {
+    width: 30%;
+}
+#header #tabs-login {
+    width: 100%;
+}
+#header ul.tabs {
+    display: table-cell;
+    vertical-align: middle;
+    height: 100%;
+    margin: 0px;
+    padding: 0px;
+    color: #fff;
+}
+#header ul#main_title {
+    display: table-cell;
+    vertical-align: middle;
+    white-space: nowrap;
+    height: 100%;
+    margin: 0px;
+    padding: 0px;
+    /*color: #f8f8f8; */
+}
+#main_title_moji {
+    font-size: 18px ;
+    /*font-weight: bold; */
+    color: #fff;
+}
+#header .header-item {
+    top: 2px;
+    position: relative;
+    height: 20px;
+}
+ul {
+    list-style-type: disc;
+}
+ul, ol {
+    margin: 0px 1.5em 1.5em 0px;
+    padding-left: 1.5em;
+}
+ol, ul {
+    list-style: outside none none;
+}
+#header #utility_nav,#password_change {
+    color: #AAA;
+    display: table-cell;
+    white-space: nowrap;
+    margin: 0px;
+    padding: 0px 26px 0px 0px;
+    text-align: right;
+}
+#header #utility_nav a:hover {
+text-decoration: none;
+color: #fff;
+background-color: #808080;
+/*padding: 6px 10px 4px 10px;*/
+padding-top: 6px;
+padding-bottom: 4px;
+position: relative;
+-webkit-border-radius: 5px;
+-moz-border-radius: 5px;
+border-radius: 5px;
+}
+#header #password_change a:hover {
+text-decoration: none;
+color: #fff;
+background-color: #808080;
+/*padding: 6px 10px 4px 10px;*/
+padding-top: 6px;
+padding-bottom: 4px;
+position: relative;
+-webkit-border-radius: 5px;
+-moz-border-radius: 5px;
+border-radius: 5px;
+}
+#header #utility_nav a {
+    text-decoration: none;
+
+}
+
+#header a, #header a:link {
+    color: #f8f8f8;
+}
+a, a:link, a:visited {
+    color: #38678B;
+    text-decoration: none;
+}
+/*#menu  a {
+    text-decoration: none;
+    display: list-item;
+    width: 230px;
+    margin: 15px;
+    border-radius: 5px;
+    font-size: 120%;
+    border: solid 2px;
+    background-color: #5a6064;
+    padding: 2px;
+    color: #fff;
+
+}
+*/
+#total {
+    text-align: right;
+    margin-top: 6px;
+    font-size: 14px;
+    color: #5e6469;
+}
+#update_time {
+    text-align: right;
+    margin-bottom: 0;
+    font-size: 12px;
+}
+footer {
+  bottom: 0;
+  position: fixed !important;
+  position: absolute;
+  width: 100%;
+  /*background-color: #bc1b5b; 赤系 */
+  background-color: #5a6064;
+  height: 17px;
+  p {
+    text-align: center;
+    color: #fff;
+    padding: 0;
+    margin: 0;
+  }
+}

@@ -1,0 +1,49 @@
+<h1>申込データ一覧</h1>
+
+<%= render 'search_form' %>
+
+<div class="table-wrapper">
+<%= paginate @loanorders %>
+<table class="listing">
+  <thead>
+    <tr>
+      <th>申込日</th>
+      <th width="50px">店舗ｺｰﾄﾞ</th>
+      <th>店　舗　名</th>
+      <th width="50px">信販会社ｺｰﾄﾞ</th>
+      <th>信販会社名</th>
+      <th>受付番号</th>
+      <th>申込金額</th>
+      <th>氏　　　名</th>
+      <th>状況ｺｰﾄﾞ</th>
+      <th>状況</th>
+      <th>入金（立替）日</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @loanorders.each do |loanorder| %>
+      <tr>
+        <td><%= loanorder.order_date %></td>
+        <td><%= loanorder.store_code %></td>
+        <td><%= loanorder.store_name %></td>
+        <td><%= loanorder.loan_company_code %></td>
+        <td><%= loanorder.loan_company_name %></td>
+        <td><%= loanorder.receipt_number %></td>
+        <td><%= loanorder.application_money %></td>
+        <td><%= loanorder.user_name %></td>
+        <td><%= loanorder.status_code %></td>
+        <td><%= loanorder.status %></td>
+        <td><%= loanorder.charge_date %></td>
+      </tr>
+    <% end %>
+  </tbody>
+
+</table>
+  <%= paginate @loanorders %>
+</div>
+<!-- ページの一番下に追加 -->
+<%= form_tag import_staff_loanorders_path, multipart: true do %>
+  <%= file_field_tag :file %>
+  <%= submit_tag "インポート" %>
+<% end %>

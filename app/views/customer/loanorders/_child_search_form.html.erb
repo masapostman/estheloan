@@ -1,0 +1,16 @@
+<%= form_for @search_form, as: 'search', url: :customer_loanorders,
+	html: { method: :get,class: "search_child"} do |f| %>
+
+	<%= markup do |m|
+    p = FormPresenter.new(f, self)
+
+    m << p.date_field_block(:order_date_from, '申込日:',class:"search_",　id:"search_order_date_form")
+    m << p.date_field_block(:order_date_to, '〜　',class:"search_",id:"search_order_date_to")
+
+  end %>
+    <%= button_tag sanitize('<i class="fa fa-search"></i> 検 索'), :type => "submit",
+    :class =>"btn btn-default btn-s-md" %>
+     <%= button_tag sanitize('<i class="fa fa-eraser"></i> クリア'), :type => "reset",
+    :class =>"reset btn btn-default btn-s-md",:id=>"reset"%>
+
+<% end %>

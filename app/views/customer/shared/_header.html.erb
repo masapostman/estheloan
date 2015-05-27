@@ -1,0 +1,37 @@
+<header>
+<div id="header" class="header">
+  <h1 id="site_title" class="site_title">
+  </h1>
+  <% if current_customer %>
+    <ul id="tabs" class="tabs header-item">
+  <% else %>
+    <ul id="tabs-login" class="tabs header-item">
+  <% end %>
+    <%= content_tag(:span, flash.notice, class: 'notice') if flash.notice %>
+    <%= content_tag(:span, flash.alert, class: 'alert') if flash.alert %>
+  </ul>
+  <ul id="main_title" ,class="tabs">
+      <ui id="main_title_ui">
+    <% if current_customer %>
+          <div id="main_title_moji">お客様ローン申込状況</div>
+    <%  end %>
+      </ui>
+  </ul>
+  <ul id="password_change" class="tabs header-item">
+      <ui id="password_change_ui">
+    <% if current_customer %>
+          <%= link_to 'パスワード変更', :edit_customer_password %>
+    <%  end %>
+      </ui>
+  </ul>
+  <ul id="utility_nav" class="tabs header-item" >
+    <ui id="current_user">
+    <%=
+      if current_customer
+        link_to 'ログアウト', :customer_session, method: :delete
+      end
+    %>
+    </ui>
+  </ul>
+  </div>
+</header>

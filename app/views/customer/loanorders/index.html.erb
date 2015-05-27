@@ -1,0 +1,59 @@
+<meta http-equiv='refresh' content='360'>
+<h2 id="header-company">
+<% if session[:parent_and_child] == '親' then %>
+      <%= session[:company_name] %>様
+  <% else %>
+      <%= session[:company_name] %>　<%= session[:store_name] %>様
+  <% end %>
+</h2>
+
+<% if session[:parent_and_child] =='親' then %>
+      <%= render 'parent_search_form' %>
+<% else %>
+      <%= render 'child_search_form' %>
+<% end %>
+
+
+<div class="table-wrapper">
+
+<%= paginate @loanorders %><div id="total">申込金額合計：<%= number_with_delimiter(@total[@company_code])%>円</div>
+<table class="listing">
+  <thead>
+    <tr>
+      <th width="80px">申 込 日</th>
+      <% if session[:parent_and_child] == '親' then %>
+        <th>店　舗　名</th>
+      <% end %>
+      <th>信　販　会　社　名</th>
+      <th width="160px">受　付　番　号</th>
+      <th width="120px">申　込　金　額</th>
+      <th width="140px">氏　　名</th>
+      <th>場　　所</th>
+      <th>状　　況</th>
+      <th width="90px">入金（立替）日</th>
+    </tr>
+  </thead>
+
+  <tbody>
+
+    <% @loanorders.each do |loanorder| %>
+      <tr>
+        <td class="order_date" style="text-align:center;"><%= loanorder.order_date %></td>
+        <% if session[:parent_and_child] == '親' then %>
+          <td><%= loanorder.store_name %></td>
+        <% end %>
+        <td><%= loanorder.loan_company_name %></td>
+        <td class="receipt_number"><%= loanorder.receipt_number %></td>
+        <td class="application_money"><%= number_with_delimiter(loanorder.application_money) %></td>
+        <td><%= loanorder.user_name %></td>
+        <td><%= loanorder.area %></td>
+        <td><%= loanorder.status %></td>
+        <td class="order_date" , style="text-align:center;"><%= loanorder.charge_date %></td>
+      </tr>
+    <% end %>
+  </tbody>
+
+</table>
+<div id="update_time"><%= '（' + I18n.l(@max).to_s+ '現在のデータを表示しています）'%></div>
+
+</div>

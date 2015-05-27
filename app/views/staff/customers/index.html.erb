@@ -1,0 +1,53 @@
+<% @title = 'お客様管理' %>
+<h1><%= @title %></h1>
+
+<div class="table-wrapper">
+
+  <div class="links">
+    <%= link_to '新規登録', :new_staff_customer %>
+  </div>
+
+  <%= paginate @customer %>
+
+  <table class="listing">
+    <tr>
+      <th>会社コード</th>
+      <th>会社名</th>
+      <th>担当者名</th>
+      <th>フリガナ</th>
+      <th>電話番号</th>
+      <th>メールアドレス</th>
+      <th>開始日</th>
+      <th>終了日</th>
+      <th>停止フラグ</th>
+      <th>アクション</th>
+    </tr>
+    <% @customer.each do |m| %>
+      <% p = CustomerPresenter.new(m, self) %>
+      <tr>
+        <td><%= m.company_code %></td>
+        <td><%= m.company_name %></td>
+        <td><%= m.staff_family_name %> <%= m.staff_given_name %></td>
+        <td><%= m.staff_family_name_kana %> <%= m.staff_given_name_kana %></td>
+        <td><%= m.telephone_number %></td>
+        <td class="email"><%= m.email %></td>
+        <td class="date"><%= m.start_date.try(:strftime, '%Y/%m/%d') %></td>
+        <td class="date"><%= m.end_date.try(:strftime, '%Y/%m/%d') %></td>
+        <td class="boolean"><%= p.suspended_mark %></td>
+        <td class="actions">
+          <%= link_to '印刷', [ :print, :staff, m ,format: 'pdf'] %> |
+          <%= link_to '編集', [ :edit, :staff, m ] %> |
+          <%= link_to '削除', [ :staff, m ], method: :delete,
+            data: { confirm: '本当に削除しますか？' } %>
+        </td>
+      </tr>
+    <% end %>
+  </table>
+
+  <%= paginate @customer %>
+
+  <div class="links">
+    <%= link_to '新規登録', :new_staff_customer %>
+  </div>
+
+</div>

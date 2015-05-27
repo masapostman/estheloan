@@ -1,0 +1,16 @@
+<%= form_for @search_form, as: 'search', url: :customer_loanorders,
+	html: { method: :get,class: "search_parent"} do |f| %>
+
+	<ul>
+  <li>
+  <label><span>店舗選択：</span></label>
+  
+  </li>
+  <li>
+  <label><span>申込日：</span></label>
+  <input class="search_datepicker" id="search_order_date_from" name="search[order_date_from]" type="text">
+  <p>〜</p>
+  <input class="search_datepicker" id="search_order_date_to" name="search[order_date_to]" type="text">
+  </li>
+  </ul>
+<% end %>

@@ -1,0 +1,296 @@
+@import 'colors';
+@import 'dimensions';
+
+#container-boundingbox.wrapper {
+    margin: 32px auto 0px;
+    width: 800px;
+}
+.wrapper #container-boundingbox, .wrapper #container {
+    width: auto;
+    border: medium none;
+    margin: 0px;
+    padding: 0px;
+    min-height: 100%;
+    height: 100%;
+}
+.wrapper #container-boundingbox .main, .wrapper #container .main {
+    width: auto;
+    border: medium none;
+    margin: 0px;
+    padding: 0px;
+    min-height: 100%;
+}
+
+/*.wrapper .main {
+    background-color: #FFF;
+    border: 1px solid #BDBDBD;
+    padding: 32px;
+    width: 736px;
+    position: relative;
+}
+*/
+
+.heading {
+    font-family: gotham,helvetica,arial,sans-serif;;
+    font-style: normal;
+    text-align: center;
+    color: #AAA;
+    -moz-osx-font-smoothing: grayscale;
+    margin: 5px 0px 5px;
+}
+.heading .branding {
+    height: 68px;
+    margin-bottom: 19px;
+}
+
+.minimal-wrapper {
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0px 10px;
+}
+.minimal-body {
+    max-width: 384px;
+    margin: 0px auto 28px;
+    border: 1px solid #DEDEDE;
+    border-radius: 2px;
+    text-align: left;
+}
+.heading h1 {
+    font-size: 32px;
+    line-height: 36px;
+    margin-bottom: 6px;
+    margin-left: 12px;
+    /*color: #2DBE60;　緑 */
+    color: f6d0ce;
+}
+/*.t-tera, h1 {
+    line-height: 1.07143;
+    font-size: 2.33333rem;
+    margin: 50px 0px 1.33333rem;
+} */
+.t-tera {
+    /*color: #bc1b5b; 赤系 */
+    color: #696969;
+    line-height: 1.25;
+    font-family: caecilia,Times,serif;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 1.4rem;
+    -moz-osx-font-smoothing: grayscale;
+    margin: 15px 0px 1.33333rem 480px;
+} 
+.minimal-body {
+    text-align: left;
+
+}
+.minimal-body {
+    background: none repeat scroll 0% 0% #FFF;
+}
+.new_customer_login_form {
+    margin: 32px;
+}
+
+.Row:after {
+    clear: both;
+}
+.Row:before, .Row:after {
+    display: table;
+    content: "";
+}
+#email-wrapper, #password-wrapper {
+    position: relative;
+}
+#password-wrapper {
+    margin-bottom: 16px;
+}
+button, html input[type="button"], input[type="reset"], input[type="submit"] {
+    cursor: pointer;
+}
+.Btn {
+    display: inline-block;
+    width: auto;
+}
+.Btn {
+    line-height: 2.28571;
+    font-family: gotham,helvetica,arial,sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1.16667rem;
+    text-align: center;
+    white-space: normal;
+    display: block;
+    box-sizing: border-box;
+    min-height: 2.66667rem;
+    width: 100%;
+    padding: 0px 1.33333rem;
+    border-width: 1px;
+    border-style: solid;
+    border-radius: 3px;
+    float: none;
+    cursor: pointer;
+    transition: all 0.2s ease 0s;
+    -moz-osx-font-smoothing: grayscale;
+}
+.Btn:hover, .Btn:focus {
+    text-decoration: none
+}
+.Btn_emph:hover {
+    color: #fff;
+    /*background-color: #ff8faf;*/
+    background-color: #4d5256;
+    border-color: #4d5256
+}
+.Btn_super {
+    line-height: 2.75;
+    font-size: 1.33333rem;
+    -moz-osx-font-smoothing: grayscale;
+    min-width: 12.8333rem;
+    min-height: 3.66667rem;
+    padding: 0px 1.33333em;
+}
+.Btn_emph {
+    font-family: gotham,helvetica,arial,sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    color: #FFF;
+    /*background-color: #2DBE60;  緑系
+    border-color: #1FAE52;
+        border-top-color: #1FAE52;
+        border-right-color-value: rgb(31, 174, 82);
+        border-bottom-color: #1FAE52;
+        border-left-color-value: rgb(31, 174, 82);
+        border-left-color-ltr-source: physical;
+        border-left-color-rtl-source: physical;
+        border-right-color-ltr-source: physical;
+        border-right-color-rtl-source: physical; */
+    /*background-color: #ff8f9e; 赤系 */
+    background-color: #6a7176;
+    border-color: #4d5256;
+        border-top-color: #4d5256;
+        border-right-color-value: rgb(31, 174, 82);
+        border-bottom-color: #4d5256;
+        border-left-color-value: rgb(31, 174, 82);
+        border-left-color-ltr-source: physical;
+        border-left-color-rtl-source: physical;
+        border-right-color-ltr-source: physical;
+        border-right-color-rtl-source: physical;
+}
+
+.Row {
+    margin-bottom: 2rem;
+}
+.label {
+    color: #747474;
+    display: inline-block;
+    margin-bottom: 0.333333rem;
+}
+.t-milli, h5, p, label {
+    line-height: 1.41667;
+    font-size: 1rem;
+}
+.t-milli, h5, p, label {
+    color: #747474;
+    line-height: 1.42857;
+    font-family: gotham,helvetica,arial,sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    -moz-osx-font-smoothing: grayscale;
+    margin: 0px;
+}
+.TextInput_large {
+    line-height: 1.1875;
+    font-size: 1.33333rem;
+    padding: 0.791667rem 1rem;
+}
+.TextInput {
+    color: #3B3B3B;
+    -moz-osx-font-smoothing: grayscale;
+    box-sizing: border-box;
+    width: 100%;
+    border: 1px solid #CACACA;
+    border-radius: 2px;
+    line-height: 1.46154;
+    font-size: 1.08333rem;
+    padding: 0.5rem 1rem;
+}
+input {
+    line-height: normal;
+}
+form ol, form ul {
+    list-style: outside none none;
+    margin: 0px;
+    padding: 0px;
+}
+form ol, form ul {
+    list-style: outside none none;
+}
+#context-switch {
+    background: none repeat scroll 0% 0% #F3F3F3;
+}
+#context-switch {
+    text-align: center;
+}
+#context-switch .switch {
+    margin-top: 6px;
+}
+.t-pico {
+    color: #747474;
+    line-height: 1.63636;
+    font-family: gotham,helvetica,arial,sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 0.916667rem;
+    -moz-osx-font-smoothing: grayscale;
+    margin: 0px;
+}
+#context-switch .switch a {
+    transition: all 0.2s ease 0s;
+    font-family: gotham,helvetica,arial,sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 18px;
+    color: #2DBE60;
+    text-decoration: none;
+}
+
+/*div#wrapper {
+  div#container {
+    div#login-form {
+      width: 384px;
+      margin : 0px auto 28px;
+      border: 1px solid #DEDEDE;
+      border-radius: 2px;
+      text-align: left;
+      background-color: #ffffff;
+
+      h1 {
+        background-color: transparent;
+        color: $very_dark_yellow;
+        font-size: $huge;
+        font-weight: bold;
+      }
+
+      form {
+        div {
+          padding: $wide;
+          label {
+            display: block;
+            padding: $moderate 0;
+          }
+          input[type='text'], input[type='password'] {
+            padding: $wide;
+            width: 400px - $wide * 4;
+          }
+          input[type='submit'] {
+            padding: $wide $wide * 2;
+          }
+
+        }
+      }
+    }
+  }
+}
+*/

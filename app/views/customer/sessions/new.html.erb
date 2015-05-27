@@ -1,0 +1,50 @@
+<% @title = 'ログイン' %>
+<div id="container-boundingbox" class="wrapper">
+  <div id="container" class="wrapper">
+    <div class="main">
+      <div class="MinimalFormFrame">
+
+      <div class="heading">
+        <h1><%= @title %></h1>
+      </div>
+
+        <div class="minimal-wrapper">
+          <div class="minimal-body">
+
+            <div class="MinimalLoginForm">
+              <div class="signin">
+              <%= form_for @login_form,url: :customer_session do |f| %>
+              <ol>
+                <li class="Row">
+                  <%=f.label :email, 'メールアドレス' %>
+                  <div id="email-wrapper">
+                    <%=f.text_field :email,class: "TextInput TextInput_large" %>
+                  </div>
+                </li>
+                <li class="Row">
+                  <%=f.label :password, 'パスワード' %>
+                  <div id="password-wrapper">
+                    <%=f.password_field :password ,class: "TextInput TextInput_large" %>
+                  </div>
+                </li>
+                <li class="checkbox-container SwitchInput Row">
+                  <%=f.check_box :remember_me %>
+                  <%=f.label :remember_me, '次回から自動ログインする。' %>
+                </li>
+                <li>
+                  <%=f.submit 'ログイン',disable_with: "ログイン中...",
+                  id: 'login',class: "Btn Btn_emph Btn_super" %>
+                </li>
+              </ol>
+              <% end %>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+      </div>        
+
+    </div>
+  </div>
+</div>

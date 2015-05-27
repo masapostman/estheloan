@@ -1,0 +1,123 @@
+@import 'colors';
+@import 'dimensions';
+form.search_parent {
+  padding: $wide;
+  border: solid $dark_gray 1px;
+  background-color: $very_light_gray;
+  width: 450px;
+  /*height: 55px; */
+
+   margin: 0 70px 0 auto;
+  border-radius: 8px 8px;
+  ul {
+    padding: 0;
+    margin: 0;
+
+  }
+  li {
+  list-style:none;
+  margin:0px;
+  padding:5px;
+  /*border-top: 2px solid #FFF; */
+  font-size: 12px;
+}
+  input#search_order_date_from {
+    text-align: center;
+    width: 80px;
+    margin-right: 10px;
+  }
+  input#search_order_date_to {
+    text-align: center;
+    width: 80px;
+    margin-right: 30px;
+  }
+
+}
+form.search_child {
+  padding: $wide;
+  border: solid $dark_gray 1px;
+  background-color: $very_light_gray;
+  width: 440px;
+  height: 28px;
+  margin: 0 70px 0 auto;
+
+  border-radius: 10px 10px;
+  div {
+    display: inline-block;
+    padding: 0;
+    margin: 6px 10px 6px 0px;
+    label { margin-right: 3px; }
+  }
+  input#search_order_date_from {
+  	text-align: center;
+  	width: 80px;
+    margin-right: 10px;
+  }
+  input#search_order_date_to {
+  	text-align: center;
+  	width: 80px;
+    margin-right: 10px;
+  }
+
+}
+button.btn {
+    margin-right: 2px;
+    color: #ffffff;
+    background-color: #6a7176;
+  }
+
+#search_store_code{
+  background: #fffdf4;
+  border: 2px solid #ccc;
+  border-radius: 5px;
+   -moz-border-radius: 5px;
+   -webkit-border-radius: 5px;
+  text-align:left;
+  font-size:11px;
+  color:#0c2245;
+  height: 23px;
+}
+#search_order_date_from,#search_order_date_to {
+  border: 2px solid #ccc ;
+  border-radius: 5px;
+  background-color: #fffdf4;
+}
+.labelfield {
+  width:5em;
+  display: block;
+  height: 23px;
+  margin-top:4px;
+  float: left;
+}
+/*送信・リセットボタンの体裁を指定（[type="○○"]で属性の値でセレクト）*/
+form.search_parent  input[type="submit"] ,
+form.search_parent  input[type="reset"] {
+  cursor:pointer;     /*←これでカーソルを指先型に変化させる*/
+  font-size:90%;
+  /*font-weight: bold; */
+  width:60px;
+  padding: 4px 10px;
+  margin-right:0.5em;
+  color: #fff;
+    border:1px solid #bbb;
+    background: #4d5256;
+/*↓背景グラデーションの指定です*/
+    background: -moz-linear-gradient(top,#acacac, #4d5256);
+    background: -webkit-linear-gradient(top, #acacac, #4d5256);
+    background: linear-gradient(#acacac, #4d5256);
+/*↓以下、ボックスの角丸、シャドウの指定*/
+    -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+    -webkit-box-shadow: 1px 1px 1px #fff;
+    -moz-box-shadow: 1px 1px 1px #fff;
+  box-shadow: 1px 1px 1px #fff;
+
+}
+form.search_parent  input[type="submit"]:hover ,
+form.search_parent  input[type="reset"]:hover {
+/*↓ここではロールオーバー時の透明度を変更。もちろんグラデーションを指定してもOK*/
+  opacity: 0.8;
+  font-size:65%;
+}
+
