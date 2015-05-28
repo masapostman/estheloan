@@ -81,7 +81,7 @@ Rails.application.configure do
   # Do not dump schema after migrations.
   config.active_record.dump_schema_after_migration = false
 
-  config.etheteloan = {
+  config.estheloan = {
     staff: { host: 'tk2-202-10751.vs.sakura.ne.jp', path: ''},
     admin: { host: 'tk2-202-10751.vs.sakura.ne.jp', path: 'admin'},
     customer: { host: 'tk2-202-10751.vs.sakura.ne.jp', path: 'mypage'}
